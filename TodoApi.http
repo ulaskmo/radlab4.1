@@ -1,0 +1,42 @@
+﻿@TodoApi_HostAddress = https://localhost:7046
+
+POST {{TodoApi_HostAddress}}/todoitems
+Content-Type: application/json
+
+{
+    "name": "Test Todo",
+    "status": "NotStarted",
+    "priority": 1
+}
+
+
+###
+
+GET {{TodoApi_HostAddress}}/todoitems
+
+###
+
+GET {{TodoApi_HostAddress}}/todoitems/4
+
+###
+
+PUT {{TodoApi_HostAddress}}/todoitems/4
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "Updated Todo",
+    "status": "Completed",
+    "priority": 2
+}
+
+
+###
+
+DELETE {{TodoApi_HostAddress}}/todoitems/1
+
+###
+
+GET {{TodoApi_HostAddress}}/todoitems/priority/1
+
+###
